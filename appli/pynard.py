@@ -1,43 +1,47 @@
 #!/usr/bin/env python
 
-from flask import Flask, request, make_response
+from flask import Flask, render_template
 import m_add as ad
 
 app = Flask(__name__)
 
 @app.route('/')
+@app.route('/index/')
+@app.route('/index.html/')
+@app.route('/home/')
 def index():
-    return 'tbd'    
+    toto = 'toto'
+    return render_template('index.html')    
 
-def menu ():
-    print "\n"
-    print "------------------------------------"
-    print "Welcome in pynard, your cave manager"
-    print "What do you want to do ?"
-    print "1 - add a bottle(s)"
-    print "2 - drink a bottle(s)"
-    print "3 - check my stock"
-    print "4 - bottle which need to be drink"
-    print "0 - Exit"
-    return raw_input("Enter your choice : ")
+#def menu ():
+#    print "\n"
+#    print "------------------------------------"
+#    print "Welcome in pynard, your cave manager"
+#    print "What do you want to do ?"
+#    print "1 - add a bottle(s)"
+#    print "2 - drink a bottle(s)"
+#    print "3 - check my stock"
+#    print "4 - bottle which need to be drink"
+#    print "0 - Exit"
+#    return raw_input("Enter your choice : ")
 
 
-def act(action):
-    if action == "1":
-        ad.add_bottles(raw_input("How many bottle do you need to add? "))
-    elif action == "2":
-        print "remove bottle(s) from the stock"
-    elif action == "3":
-        print "display all / a subset"
-    elif action == "4":
-        print "display bottles which need to be drink"
-    elif action == "0":
-        print "Exit pynard"
-    else:
-        print "Wrong input"
+#def act(action):
+#    if action == "1":
+#        ad.add_bottles(raw_input("How many bottle do you need to add? "))
+#    elif action == "2":
+#        print "remove bottle(s) from the stock"
+#    elif action == "3":
+#        print "display all / a subset"
+#    elif action == "4":
+#        print "display bottles which need to be drink"
+#    elif action == "0":
+#        print "Exit pynard"
+#    else:
+#        print "Wrong input"
 
-action = -1
+#action = -1
 
-while action != "0":
-    action = menu()
-    act(str(action))
+#while action != "0":
+#    action = menu()
+#    act(str(action))
