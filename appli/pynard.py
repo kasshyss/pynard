@@ -1,7 +1,13 @@
 #!/usr/bin/env python
 
-
+from flask import Flask, request, make_response
 import m_add as ad
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return 'tbd'    
 
 def menu ():
     print "\n"
