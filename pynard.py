@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+
+import m_add as ad
+
 def menu ():
     print "\n"
     print "------------------------------------"
@@ -15,7 +18,7 @@ def menu ():
 
 def act(action):
     if action == "1":
-        print "add to the stock"
+        ad.add_bottles(raw_input("How many bottle do you need to add? "))
     elif action == "2":
         print "remove bottle(s) from the stock"
     elif action == "3":
