@@ -32,4 +32,3 @@ action = -1
 while action != "0":
     action = menu()
     act(str(action))
-    print "\n"
