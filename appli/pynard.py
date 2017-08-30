@@ -12,13 +12,11 @@ app = Flask(__name__)
 @app.route('/index.html/')
 @app.route('/home/')
 def index():
-    if request.method == "GET":
-        title="Welcome in pynard, your cave manager"
-        page_title = "Pynard"
-        options_label = [["Add bottles", "add"],["Remove bottles", "remove"],["Display the stock", "stock"],["Display the bottles which nee to be drink", "to_drink"]]
-        return render_template('index.html', options_label = options_label, title = title, page_title = page_title)    
-    else:
-        print "toto"
+
+    title="Welcome in pynard, your cave manager"
+    page_title = "Pynard"
+    options_label = [["Add bottles", "add"],["Remove bottles", "remove"],["Display the stock", "stock"],["Display the bottles which nee to be drink", "to_drink"]]
+    return render_template('index.html', options_label = options_label, title = title, page_title = page_title)
 
 #Application add bottle point
 @app.route('/add/')
@@ -34,7 +32,6 @@ def rm_bottle():
     title="Remove bootles to your cave"
     return render_template('remove.html', title = title, page_title = page_title)    
 
-
 #Display the stock
 @app.route('/stock/')
 def stock():
@@ -42,9 +39,8 @@ def stock():
     title="Display bootles from your cave"
     return render_template('stock.html', title = title, page_title = page_title)   
 
-
 #Display bottles whicjh need to be drink
-@app.route('/stock/')
+@app.route('/to_drink/')
 def to_drink():
     page_title = "Pynard"
     title="Display bootles to older"
