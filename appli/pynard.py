@@ -5,6 +5,8 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
+#Application start point
 @app.route('/')
 @app.route('/index/')
 @app.route('/index.html/')
@@ -16,28 +18,10 @@ def index():
     return render_template('index.html', options_label = options_label, title = title, page_title = page_title)    
 
 
-
-
-
-
-
-
-
-
-
-
-#    elif action == "2":
-#        print "remove bottle(s) from the stock"
-
-
-
-
-
-
-
-
-
-
-
-
+#Application add bottle point
+@app.route('/add')
+def add_bottle():
+    title="Add new bootles to your cave"
+    page_title = "Pynard"
+    return render_template('add.html', title = title, page_title = page_title)    
 
