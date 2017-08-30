@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from flask import Flask, render_template, request
+import m_save
 
 app = Flask(__name__)
 page_title = "Pynard"
@@ -13,7 +14,7 @@ page_title = "Pynard"
 def index():
 
     title="Welcome in pynard, your cave manager"
-
+    #[label, targed page]
     options_label = [["Add bottles", "add"],["Remove bottles", "remove"],["Display the stock", "stock"],["Display the bottles which nee to be drink", "to_drink"]]
     return render_template('index.html', options_label = options_label, title = title, page_title = page_title)
 
@@ -25,7 +26,10 @@ def add_bottle():
         title="Add new bootles to your cave"
         return render_template('add.html', title = title, page_title = page_title, bottle = bottle)
     else:
-        
+        bottle_attribute_dic = {}
+        for attribute in bottle:
+            bottle_attribute_dic[attribute] = request.form[attribute]
+        m_save.add_bottle(bottle_attribute_dic)
         title="Bottle added !" + request.form["Year"]
         return render_template('add.html', title = title, page_title = page_title)   
 
