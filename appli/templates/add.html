@@ -9,10 +9,12 @@
     <body>
 	    <h1>{{title}}</h1>
 	    <ul>
-
-			
-		    forme to fill with bottle data
-
+		<form action="", method="POST">
+		   {% for attribute in bottle %}
+		   {{attribute}} : <input type="text" name='{{attribute}}' /><br>
+	   	   {% endfor %}	   
+		   <input type='submit' value="create" /><br>
+		</form>
 	    </ul>
     </body>
 </html>
