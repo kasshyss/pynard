@@ -53,10 +53,9 @@ def rm_bottle():
 #Display the stock
 @app.route('/stock/')
 def stock():
-    cave = m_get.get_cave
-    print cave
+    cave =  m_get.get_cave()
     title="Display bootles from your cave"
-    return render_template('stock.html', title = title, page_title = page_title)   
+    return render_template('stock.html', title = title, page_title = page_title, cave = cave)   
 
 #Display bottles whicjh need to be drink
 @app.route('/to_drink/')

@@ -9,10 +9,16 @@
     <body>
 	    <h1>{{title}}</h1>
 	    <ul>
-
+		<table>
+			{% for bottle in cave %}
+			<tr>
+				{% for attribute in bottle %}
+				<td>{{attribute}}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
 			
-		    forme to fill with bottle data
-
 	    </ul>
     </body>
 </html>
