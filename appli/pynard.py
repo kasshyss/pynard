@@ -4,6 +4,7 @@ from flask import Flask, render_template, request
 import m_save
 import m_conf
 import m_log
+import m_get
 
 app = Flask(__name__)
 page_title = "Pynard"
@@ -52,7 +53,8 @@ def rm_bottle():
 #Display the stock
 @app.route('/stock/')
 def stock():
-
+    cave = m_get.get_cave
+    print cave
     title="Display bootles from your cave"
     return render_template('stock.html', title = title, page_title = page_title)   
 
