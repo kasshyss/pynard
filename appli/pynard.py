@@ -10,7 +10,7 @@ page_title = "Pynard"
 
 #Application start point
 @app.route('/')
-@app.route('/index/')
+@app.route('/index/', methods=['GET', 'POST'])
 @app.route('/index.html/')
 @app.route('/home/')
 def index():
@@ -26,7 +26,10 @@ def add_bottle():
     db_name =  m_conf.get_db_name('bottle.conf')   
     if request.method == 'GET':
         title="Add new bottles to your cave"
-        return render_template('add.html', title = title, page_title = page_title, bottle = bottle)
+        button_label = 'Validate'
+        button_targed_page = 'add.html'
+        
+        return render_template('add.html', title = title, page_title = page_title, bottle = bottle, button_label = button_label)
     else: #POST
         bottle_attribute_dic = {}
         for attribute in bottle:
@@ -35,7 +38,9 @@ def add_bottle():
             title="Bottles added !"
         else:
             title='Error in bottles creation'
-        return render_template('add.html', title = title, page_title = page_title)   
+        button_label='Return to the main page'
+        button_target_page = '/index/'
+        return render_template('add.html', title = title, page_title = page_title, button_label=button_label, button_target_page=button_target_page)   
 
 #Application remove from the stock
 @app.route('/remove/')

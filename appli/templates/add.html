@@ -9,11 +9,11 @@
     <body>
 	    <h1>{{title}}</h1>
 	    <ul>
-		<form action="", method="POST">
+		    <form action='{{button_target_page}}', method="POST">
 		   {% for attribute in bottle %}
 		   {{attribute}} : <input type="text" name='{{attribute}}' /><br>
 	   	   {% endfor %}	   
-		   <input type='submit' value="create" /><br>
+		   <input type='submit' value='{{button_label}}' /><br>
 		</form>
 	    </ul>
     </body>

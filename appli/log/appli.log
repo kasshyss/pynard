@@ -13,3 +13,26 @@
 31/17 11:28:20 | m_conf.get_label | ['Name of the productor', 'Bootle label', 'Production year', 'Bottle size', 'Drink befor']
 31/17 11:35:19 | m_save.addbottle | create bootle with {'Bottle size': u'0.75', 'Drink befor': u'2018', 'Production year': u'2017', 'Name of the productor': u'Toto', 'Bootle label': u'Le bon vin'}
 31/17 11:37:14 | m_save.addbottle | create bootle with {'Bottle size': u'0.75', 'Drink befor': u'2018', 'Production year': u'2017', 'Name of the productor': u'Toto', 'Bootle label': u'Le bon vin'}
+31/17 12:00:01 | m_conf.get_db_name | {'Bottle size': 'Type', 'Drink befor': 'Size', 'Production year': 'Year', 'Name of the productor': 'Producer', 'Bootle label': 'Name'}
+31/17 12:00:10 | m_conf.get_db_name | {'Bottle size': 'Type', 'Drink befor': 'Size', 'Production year': 'Year', 'Name of the productor': 'Producer', 'Bootle label': 'Name'}
+31/17 12:00:10 | m_save.addbottle | create bootle with {'Bottle size': u'0.75', 'Drink befor': u'2018', 'Production year': u'2017', 'Name of the productor': u'Toto', 'Bootle label': u'Le bon vin'}
+31/17 12:10:43 | m_conf.get_db_name | {'Name of the producer\n': 'producer', 'Bottle Label\n': 'name', 'Type of the drink\n': 'type', 'Drink before\n': 'limit', 'Bottle size\n': 'size'}
+31/17 12:11:21 | m_conf.get_db_name | {'Name of the producer\n': 'producer', 'Bottle Label\n': 'name', 'Type of the drink\n': 'type', 'Drink before\n': 'limit', 'Bottle size\n': 'size'}
+31/17 12:15:03 | m_conf.get_db_name | {'Bottle size\n': 'size', 'Name of the producer\n': 'producer', 'Bottle Label\n': 'name', 'Type of the drink\n': 'type', 'Drink before\n': 'limit', 'Number of bottle\n': 'quatity'}
+31/17 12:15:14 | m_conf.get_db_name | {'Bottle size\n': 'size', 'Name of the producer\n': 'producer', 'Bottle Label\n': 'name', 'Type of the drink\n': 'type', 'Drink before\n': 'limit', 'Number of bottle\n': 'quatity'}
+31/17 12:15:18 | m_conf.get_db_name | {'Bottle size\n': 'size', 'Name of the producer\n': 'producer', 'Bottle Label\n': 'name', 'Type of the drink\n': 'type', 'Drink before\n': 'limit', 'Number of bottle\n': 'quatity'}
+31/17 12:15:31 | m_conf.get_db_name | {'Bottle size\n': 'size', 'Name of the producer\n': 'producer', 'Bottle Label\n': 'name', 'Type of the drink\n': 'type', 'Drink before\n': 'limit', 'Number of bottle\n': 'quatity'}
+31/17 12:59:45 | m_conf.get_db_name | {'Bottle size\n': 'size', 'Name of the producer\n': 'producer', 'Bottle Label\n': 'name', 'Type of the drink\n': 'type', 'Drink before\n': 'limit', 'Number of bottle\n': 'quatity'}
+31/17 13:10:14 | pynard.add_bottle.POST | add bottle with form <Request 'http://127.0.0.1:5000/add/' [POST]>
+31/17 13:11:26 | pynard.add_bottle.POST | add bottle with form ImmutableMultiDict([('Type of the drink\r\n', u''), ('Bottle size\r\n', u''), ('Number of bottle\r\n', u''), ('Drink before\r\n', u'2020'), ('Name of the producer\r\n', u''), ('Bottle Label\r\n', u'')])
+31/17 13:20:38 | pynard.add_bottle.POST | add bottle with form ['Name of the producer\n', 'Bottle Label\n', 'Type of the drink\n', 'Bottle size\n', 'Drink before\n', 'Number of bottle\n']
+31/17 13:23:31 | pynard.add_bottle.POST | add bottle with form ['Name of the producer\n', 'Bottle Label\n', 'Type of the drink\n', 'Bottle size\n', 'Drink before\n', 'Number of bottle\n']
+31/17 13:27:29 | pynard.add_bottle.POST | add bottle with form ['name|Bottle Labe']
+31/17 13:32:55 | m_save.addbottle | create bootle with {'quatity': u'', 'name': u'', 'producer': u'', 'limit': u'', 'type': u'', 'size': u''}
+31/17 14:39:26 | m_save.addbottle | create bootle with {'quatity': u'', 'name': u'', 'producer': u'', 'limit': u'', 'type': u'', 'size': u''}
+31/17 14:43:27 | m_save.addbottle | create bootle with {'quatity': u'', 'name': u'', 'producer': u'', 'limit': u'', 'type': u'', 'size': u''}
+31/17 14:45:02 | m_save.addbottle | create bootle with {'quatity': u'', 'name': u'', 'producer': u'', 'limit': u'', 'type': u'', 'size': u''}
+31/17 14:48:09 | m_save.addbottle | create bootle with {'quatity': u'', 'name': u'', 'producer': u'', 'limit': u'', 'type': u'', 'size': u''}
+31/17 14:49:14 | m_save.addbottle | create bootle with {'quatity': u'', 'name': u'', 'producer': u'', 'limit': u'', 'type': u'', 'size': u''}
+31/17 14:50:05 | m_save.addbottle | create bootle with {'quatity': u'', 'name': u'', 'producer': u'', 'limit': u'', 'type': u'', 'size': u''}
+31/17 14:53:09 | m_save.addbottle | create bootle with {'quatity': u'', 'name': u'', 'producer': u'', 'limit': u'', 'type': u'', 'size': u''}
