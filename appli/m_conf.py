@@ -13,5 +13,21 @@ def get_label(conf_file_name):
     file = open(os.path.dirname(os.path.abspath(__file__)) + os.path.sep + 'config' + os.path.sep + conf_file_name, 'r')
     lines = file.readlines()
     file.close()
+    
+    bottle_list = []
+    for line in lines:
+        bottle_list.append(line.split('|')[1][:-1:])
     #m_log.write_log('appli.log', 'm_conf.get_label | ' + str(lines[1][:-2:].split(';')))
-    return lines[1][:-2:].split(';')
+    return bottle_list
+
+#get dico label / db name
+def get_db_name(conf_file_name):
+
+    file = open(os.path.dirname(os.path.abspath(__file__)) + os.path.sep + 'config' + os.path.sep + conf_file_name, 'r')
+    lines = file.readlines()
+    file.close()
+    conf_dic={}
+    for line in lines:
+        conf_dic[line.split('|')[1][:-1:]] = line.split('|')[0]
+    #m_log.write_log('appli.log', 'm_conf.get_db_name | ' + str(conf_dic))
+    return conf_dic

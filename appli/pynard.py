@@ -23,15 +23,18 @@ def index():
 @app.route('/add/', methods=['GET', 'POST'])
 def add_bottle():
     bottle = m_conf.get_label('bottle.conf')
+    db_name =  m_conf.get_db_name('bottle.conf')   
     if request.method == 'GET':
-        title="Add new bootles to your cave"
+        title="Add new bottles to your cave"
         return render_template('add.html', title = title, page_title = page_title, bottle = bottle)
-    else:
+    else: #POST
         bottle_attribute_dic = {}
         for attribute in bottle:
-            bottle_attribute_dic[attribute] = request.form[attribute]
-        m_save.add_bottle(bottle_attribute_dic)
-        title="Bottle added !"
+            bottle_attribute_dic[db_name[attribute]] = request.form[attribute]
+        if m_save.add_bottle(bottle_attribute_dic):
+            title="Bottles added !"
+        else:
+            title='Error in bottles creation'
         return render_template('add.html', title = title, page_title = page_title)   
 
 #Application remove from the stock
