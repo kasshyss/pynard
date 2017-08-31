@@ -1,0 +1,15 @@
+31d/17yyy 09:32:39 : toto
+31/17 11:25:01 | m_conf.get_label | ['Producer;Name;Year;Type;Size;Limit\n', 'Name of the productor;Bootle label;Production year;Bottle size;Drink before\n']
+31/17 11:27:07 | m_conf.get_label | Name of the productor;Bootle label;Production year;Bottle size;Drink befor
+31/17 11:27:08 | m_conf.get_label | Name of the productor;Bootle label;Production year;Bottle size;Drink befor
+31/17 11:28:17 | m_conf.get_label | ['Name of the productor', 'Bootle label', 'Production year', 'Bottle size', 'Drink befor']
+31/17 11:28:18 | m_conf.get_label | ['Name of the productor', 'Bootle label', 'Production year', 'Bottle size', 'Drink befor']
+31/17 11:28:19 | m_conf.get_label | ['Name of the productor', 'Bootle label', 'Production year', 'Bottle size', 'Drink befor']
+31/17 11:28:19 | m_conf.get_label | ['Name of the productor', 'Bootle label', 'Production year', 'Bottle size', 'Drink befor']
+31/17 11:28:19 | m_conf.get_label | ['Name of the productor', 'Bootle label', 'Production year', 'Bottle size', 'Drink befor']
+31/17 11:28:20 | m_conf.get_label | ['Name of the productor', 'Bootle label', 'Production year', 'Bottle size', 'Drink befor']
+31/17 11:28:20 | m_conf.get_label | ['Name of the productor', 'Bootle label', 'Production year', 'Bottle size', 'Drink befor']
+31/17 11:28:20 | m_conf.get_label | ['Name of the productor', 'Bootle label', 'Production year', 'Bottle size', 'Drink befor']
+31/17 11:28:20 | m_conf.get_label | ['Name of the productor', 'Bootle label', 'Production year', 'Bottle size', 'Drink befor']
+31/17 11:35:19 | m_save.addbottle | create bootle with {'Bottle size': u'0.75', 'Drink befor': u'2018', 'Production year': u'2017', 'Name of the productor': u'Toto', 'Bootle label': u'Le bon vin'}
+31/17 11:37:14 | m_save.addbottle | create bootle with {'Bottle size': u'0.75', 'Drink befor': u'2018', 'Production year': u'2017', 'Name of the productor': u'Toto', 'Bootle label': u'Le bon vin'}

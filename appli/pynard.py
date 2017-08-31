@@ -2,6 +2,8 @@
 
 from flask import Flask, render_template, request
 import m_save
+import m_conf
+import m_log
 
 app = Flask(__name__)
 page_title = "Pynard"
@@ -12,7 +14,6 @@ page_title = "Pynard"
 @app.route('/index.html/')
 @app.route('/home/')
 def index():
-
     title="Welcome in pynard, your cave manager"
     #[label, targed page]
     options_label = [["Add bottles", "add"],["Remove bottles", "remove"],["Display the stock", "stock"],["Display the bottles which nee to be drink", "to_drink"]]
@@ -21,7 +22,7 @@ def index():
 #Application add bottle point
 @app.route('/add/', methods=['GET', 'POST'])
 def add_bottle():
-    bottle = ["Producer", "Name", "Year", "Type"]
+    bottle = m_conf.get_label('bottle.conf')
     if request.method == 'GET':
         title="Add new bootles to your cave"
         return render_template('add.html', title = title, page_title = page_title, bottle = bottle)
@@ -30,7 +31,7 @@ def add_bottle():
         for attribute in bottle:
             bottle_attribute_dic[attribute] = request.form[attribute]
         m_save.add_bottle(bottle_attribute_dic)
-        title="Bottle added !" + request.form["Year"]
+        title="Bottle added !"
         return render_template('add.html', title = title, page_title = page_title)   
 
 #Application remove from the stock
