@@ -5,9 +5,11 @@ import m_save
 import m_conf
 import m_log
 import m_get
+import m_tchatbot
 
 app = Flask(__name__)
 page_title = "Pynard"
+tchat = m_tchatbot.init()
 
 #Application start point
 @app.route('/')
@@ -17,7 +19,7 @@ page_title = "Pynard"
 def index():
     title="Welcome in pynard, your cave manager"
     #[label, targed page]
-    options_label = [["Add bottles", "add"],["Remove bottles", "remove"],["Display the stock", "stock"],["Display the bottles which nee to be drink", "to_drink"]]
+    options_label = [["Add bottles", "add"],["Remove bottles", "remove"],["Display the stock", "stock"],["Display the bottles which nee to be drink", "to_drink"],["Ask the robot", "robot"]]
     return render_template('index.html', options_label = options_label, title = title, page_title = page_title)
 
 #Application add bottle point
@@ -64,6 +66,16 @@ def to_drink():
     title="Display bootles to older"
     return render_template('to_drink.html', title = title, page_title = page_title)   
 
+#robot for the cave actions
+@app.route('/robot/', methods=['GET', 'POST'])
+def robot_action():
 
-
-
+    title='Robot in action !'
+    if request.method == 'GET':
+        target_page = 'mrrobot.html'
+        button_label = 'ask to the robot'
+        return render_template('mrrobot.html', title = title, page_title = page_title, button_label = button_label, answers='Hi, I am a robot.')
+    else:
+        target_page = 'mrrobot.html'
+        button_label = 'ask to the robot'
+        return render_template('mrrobot.html', title = title, page_title = page_title, button_label = button_label, answers = m_tchatbot.tchat(request.form['Ask'], tchat))

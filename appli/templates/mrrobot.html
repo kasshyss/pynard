@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<link href="{{url_for('static', filename='my_style.css')}}" rel="stylesheet" type="text/css"/>
+        <meta charset="utf-8" />
+	<title>{{page_title}}</title>
+    </head>
+
+    <body>
+	    <h1>{{title}}</h1>
+	    <ul>
+		<form action='{{target_page}}', method="POST">
+		   <input type="text" name='Ask' /><br>
+		   <input type='submit' value='{{button_label}}' /><br>
+		</form>
+	    </ul>
+	    <h1>{{answers}}</h1>
+    </body>
+</html>
+

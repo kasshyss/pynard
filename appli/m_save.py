@@ -12,9 +12,6 @@ def add_bottle(bottle_attribute):
     for key in bottle_attribute:
         attributes = attributes + ";" + bottle_attribute[key]
     
-
-
-
     path = os.path.dirname(os.path.abspath(__file__))
     
     file = open(path + os.path.sep + "data"+os.path.sep+"cave.csv", "a")
