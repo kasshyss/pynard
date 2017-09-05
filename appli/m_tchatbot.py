@@ -7,7 +7,7 @@ from chatterbot import ChatBot
 
 def init():
     chatbot = ChatBot('Ron Obvious', trainer="chatterbot.trainers.ChatterBotCorpusTrainer")
-    chatbot.train("chatterbot.corpus.english")
+    chatbot.train("chatterbot.corpus.english")    
     return chatbot
 
 def tchat(message, chatbox):
