@@ -6,11 +6,19 @@ ul {
   text-align: center
 }
 
-abutton.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
 
-    text-decoration: none;
-    color: initial;
+div {
+	box-shadow 0 0 1px black inset;
 }
+
+#contentBox {
+	margin 0 auto;
+	width 70%;
+}
+
+#contentBox.column {
+	float left;
+	margin 0;
+	width 50%;
+}
+
