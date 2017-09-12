@@ -1,24 +1,24 @@
 h1 {
-  text-align: center
+  text-align: center;
 }
 
 ul {
-  text-align: center
+  text-align: center;
 }
 
 
 div {
-	box-shadow 0 0 1px black inset;
+	box-shadow: 0 0 1px black inset;
 }
 
 #contentBox {
-	margin 0 auto;
-	width 70%;
+	margin: 0 auto;
+	width: 70%;
 }
 
-#contentBox.column {
+#contentBox .column {
 	float left;
-	margin 0;
-	width 50%;
+	margi:n 0;
+	width: 50%;
 }
 

@@ -26,6 +26,7 @@ def index():
 @app.route('/add/', methods=['GET', 'POST'])
 def add_bottle():
     bottle = m_conf.get_label('bottle.conf')
+    productor = m_conf.get_label('productor.conf')
     db_name =  m_conf.get_db_name('bottle.conf')   
     if request.method == 'GET':
         title="Add new bottles to your cave"
