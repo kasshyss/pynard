@@ -1,15 +1,13 @@
 #!/usr/bin/env python
 
 from flask import Flask, render_template, request
-import m_save
-import m_conf
+import m_conf as conf
 import m_log
-import m_get
 import m_tchatbot
+import m_IO as io
 
 app = Flask(__name__)
 page_title = "Pynard"
-tchat = m_tchatbot.init()
 
 #Application start point
 @app.route('/')
@@ -25,23 +23,22 @@ def index():
 #Application add bottle point
 @app.route('/add/', methods=['GET', 'POST'])
 def add_bottle():
-    bottle = m_conf.get_label('bottle.conf')
-    productor = m_conf.get_label('productor.conf')
-    db_name =  m_conf.get_db_name('bottle.conf')   
+    bottle = conf.get_conf('bottle.conf')
+    productor = conf.get_conf('productor.conf')
     if request.method == 'GET':
         title="Add new bottles to your cave"
         button_label = 'Validate'
         button_targed_page = 'add.html'
         
-        return render_template('add.html', title = title, page_title = page_title, bottle = bottle, button_label = button_label)
+        return render_template('add.html', title = title, page_title = page_title, bottle = bottle, button_label = button_label, productor = productor)
     else: #POST
         bottle_attribute_dic = {}
-        for attribute in bottle:
-            bottle_attribute_dic[db_name[attribute]] = request.form[attribute]
-        if m_save.add_bottle(bottle_attribute_dic):
-            title="Bottles added !"
-        else:
-            title='Error in bottles creation'
+        #for attribute in bottle:
+        #    bottle_attribute_dic[db_name[attribute]] = request.form[attribute]
+        #if m_save.add_bottle(bottle_attribute_dic):
+        #    title="Bottles added !"
+        #else:
+        title='Error in bottles creation'
         button_label='Return to the main page'
         button_target_page = '/index/'
         return render_template('add.html', title = title, page_title = page_title, button_label=button_label, button_target_page=button_target_page)   

@@ -7,22 +7,25 @@
     </head>
 
     <body>
-	    <h1>{{title}}</h1>
-		<form action='{{button_target_page}}', method="POST">
-		   {% for attribute in bottle %}
-		   {{attribute}} : <input type="text" name='{{attribute}}' /><br>
-	   	   {% endfor %}	   
-		   <input type='submit' value='{{button_label}}' /><br>
+	<h1>{{title}}</h1>
+	<form action='{{button_target_page}}', method="POST">
 		</form>
-	    <div id="contentBox">
-		    <div class="column">
-			test
-		    </div>
+	    	<div id="contentBox">
+			<div class="column">
+		   		{% for key, attribute in bottle.iteritems() %}
+		   		{{attribute}} : <input type="text" name='{{key}}' /><br>
+	   	   		{% endfor %} 
+		    	</div>
+		    	
+			<div class="column">
+		   		{% for key, attribute in productor.iteritems() %}
+		   		{{attribute}} : <input type="text" name='{{key}}' /><br>
+	   	   		{% endfor %} 
+		    	</div>
+	    	</div>
 
-		    <div class="column">
-		    	test2 ll
-		    </div>
-	    </div>
+		<input type='submit' value='{{button_label}}' /><br>
+	</form>
     </body>
 </html>
 

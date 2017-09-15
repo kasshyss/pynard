@@ -39,3 +39,6 @@
 31/17 15:27:47 | m_save.addbottle | create bootle with {'quatity': u'2', 'name': u'Le bon vin', 'producer': u'Toto', 'limit': u'2018', 'year': u'2015', 'type': u'vin', 'size': u'0.75'}
 31/17 15:28:30 | m_save.addbottle | create bootle with {'quatity': u'1', 'name': u'Ca pique', 'producer': u'Moi', 'limit': u'2045', 'year': u'2017', 'type': u'whisky', 'size': u'0.75'}
 31/17 15:30:04 | m_save.addbottle | create bootle with {'quatity': u'1', 'name': u'Brandbouc', 'producer': u'Merry', 'limit': u'2090', 'year': u'1984', 'type': u'calva', 'size': u'1'}
+01/17 15:15:27 | m_save.addbottle | create bootle with {'quatity': u'2', 'name': u'l', 'producer': u'lol', 'limit': u'ee', 'year': u'a', 'type': u'd', 'size': u'a'}
+04/17 13:56:17 | m_save.addbottle | create bootle with {'quatity': u'4', 'name': u'Le beau nom', 'producer': u'PB', 'limit': u'2020', 'year': u'2017', 'type': u'vin', 'size': u'1.5'}
+04/17 13:56:45 | m_save.addbottle | create bootle with {'quatity': u'4', 'name': u'Le beau nom', 'producer': u'PB', 'limit': u'2020', 'year': u'2017', 'type': u'vin', 'size': u'1.5'}
