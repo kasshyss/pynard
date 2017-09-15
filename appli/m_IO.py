@@ -18,7 +18,7 @@ def __pg_request(query):
         cursor.close()
     except ValueError:
         print 'Unable to connect database : \n' + ValueError
-        m_log.write_log('appli.log','m_save.add_bottle_pg | Unable to manage the database link' + str(ValueError))
+        m_log.write_log('appli.log','m_IO.add_bottle_pg | Unable to manage the database link' + str(ValueError))
         return False
     return data
 
