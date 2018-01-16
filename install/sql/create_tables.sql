@@ -30,6 +30,7 @@ CREATE TABLE productor(
 CREATE TABLE ref_bottle_type(
 	type_id SERIAL PRIMARY KEY
 	,type_name VARCHAR(20)
+	,language VARCHAR(3)
 	,type_creation_date DATE
 );
 
