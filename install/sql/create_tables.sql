@@ -76,6 +76,7 @@ CREATE TABLE ref_location(
 CREATE TABLE stock(
 	fk_cave_id INT REFERENCES cave(cave_id)
 	,fk_bottle_id INT REFERENCES bottle(bottle_id)
-	,stock_location INT REFERENCES ref_location(location_id)
-	,quantity INT
+	,fk_stock_location INT REFERENCES ref_location(location_id)
+	,quantity INTEGER
+	,unit_price DECIMAL(10,6)
 );
