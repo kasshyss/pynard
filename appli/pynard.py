@@ -3,7 +3,6 @@
 from flask import Flask, render_template, request
 import m_conf as conf
 import m_log
-import m_tchatbot
 import m_IO as io
 
 app = Flask(__name__)
@@ -64,16 +63,3 @@ def to_drink():
     title="Display bootles to older"
     return render_template('to_drink.html', title = title, page_title = page_title)   
 
-#robot for the cave actions
-@app.route('/robot/', methods=['GET', 'POST'])
-def robot_action():
-
-    title='Robot in action !'
-    if request.method == 'GET':
-        target_page = 'mrrobot.html'
-        button_label = 'ask to the robot'
-        return render_template('mrrobot.html', title = title, page_title = page_title, button_label = button_label, answers='Hi, I am a robot.')
-    else:
-        target_page = 'mrrobot.html'
-        button_label = 'ask to the robot'
-        return render_template('mrrobot.html', title = title, page_title = page_title, button_label = button_label, answers = m_tchatbot.tchat(request.form['Ask'], tchat))
