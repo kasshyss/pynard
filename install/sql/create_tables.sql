@@ -21,6 +21,7 @@ CREATE TABLE productor(
 	,productor_address VARCHAR(50)
 	,productor_phone VARCHAR(16)
 	,productor_mail VARCHAR(50)
+	,productor_picture_path VARCHAR(140)
 	,productor_creation_date DATE
 	,productor_delete_date DATE
 
@@ -52,6 +53,7 @@ CREATE TABLE bottle(
 	,bottle_size DECIMAL(10,6)
 	,bottle_production_year VARCHAR(4)
 	,bottle_expiration_date VARCHAR(4)
+	,bottle_picture_path VARCHAR(140)
 	,bottle_creation_date DATE
 );
 
@@ -59,6 +61,7 @@ CREATE TABLE bottle(
 CREATE TABLE cave(
 	cave_id SERIAL PRIMARY KEY
 	,cave_name VARCHAR(30)
+	,cave_picture_path VARCHAR(140)
 	,cave_creation_date DATE
 	,cave_last_update DATE
 	,cave_delete_date DATE
