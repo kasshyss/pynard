@@ -2,7 +2,7 @@
 
 from flask import Flask, render_template, request
 import m_conf as conf
-import m_log
+import m_log as log
 import m_IO as io
 
 app = Flask(__name__)
