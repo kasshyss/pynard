@@ -102,3 +102,4 @@ ENV/
 
 # remove pyc
 *.pyc
+*.swp
