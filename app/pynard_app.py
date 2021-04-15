@@ -25,5 +25,5 @@ logger.debug('Init done')
 @app.route('/')
 def index():
     logger.info('root')
-    toto = pynard.get_all_bottle()
-    return "Done"
+    toto = pynard.set_countries()
+    return 'DONE'
