@@ -2,7 +2,7 @@ INSERT INTO BOTTLE_TYPE
 	(TYPE_ID, TYPE_NAME, CREATE_DATE, UPDATE_DATE)
 VALUES (
 	{type_id}
-	,{type_name}
+	,'{type_name}'
 	,DATETIME('now')
 	,DATETIME('now')
 );
