@@ -47,3 +47,11 @@ def set_bottle_type(type_name):
     type_data[queries['labels']['bottle_type_name']] = type_name
     data = db.execute_file(queries['name']['set_bottle_type'], override = type_data)
     return data
+
+def get_countries():
+
+    logger.info('Get countries data')
+    data = db.execute_file(queries['name']['get_countries'])
+    if len(data) == 0:
+        logger.warning('No country retrived by query')
+    return data

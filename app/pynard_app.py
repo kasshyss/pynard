@@ -63,3 +63,10 @@ def create_bottle_type():
     
     data = pynard.set_bottle_type(type_name)
     return json.dumps(data)
+
+@app.route('/get_countries')
+def get_countries():
+
+    logger.info('Retrive countries list')
+    data = pynard.get_countries()
+    return json.dumps(data)
